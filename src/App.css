@@ -31,3 +31,79 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes bruceLee {
+  0%, 100% {
+    transform: scale(0.2) translate(0, 0);
+  }
+  50% {
+    transform: scale(0.5) translate(200px, 0);
+  }
+  80% {
+    transform: scale(1) translate(-200px, 0);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+    background-color: red;
+    border-radius: 50%;
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotatey(0deg);
+  }
+  10% {
+    transform: rotatey(30deg);
+  }
+  20% {
+    transform: rotatey(70deg);
+  }
+  40% {
+    transform: rotatey(110deg);
+  }
+  50% {
+    transform: rotatey(180deg);
+  }
+  60% {
+    transform: rotatey(210deg);
+    opacity: 0;
+  }
+  70% {
+    transform: rotatey(240deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotatey(300deg);
+  }
+  90% {
+    transform: rotatey(340deg);
+  }
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+.kick {
+  animation: bruceLee 4s ease-out 0s infinite alternate;
+}
+
+.kick:hover {
+  animation-play-state: paused;
+}
+
+.makeSpin:hover {
+  animation: spin 0.5s;
+}
+
+.makeFly {
+  animation: fly 2s;
+}
+
+.makeRotate:hover {
+  animation: rot 2s linear 0s infinite;
+}
+
